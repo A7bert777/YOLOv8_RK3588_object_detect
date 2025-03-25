@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfileutils.a  CMakeFiles/fileutils.dir/file_utils.c.o
+/usr/bin/ranlib libfileutils.a

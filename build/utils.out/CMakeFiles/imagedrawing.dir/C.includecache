@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/firefly/linshi/yolov8/utils/common.h
+
+/home/firefly/linshi/yolov8/utils/font.h
+
+/home/firefly/linshi/yolov8/utils/image_drawing.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+image_drawing.h
+/home/firefly/linshi/yolov8/utils/image_drawing.h
+font.h
+/home/firefly/linshi/yolov8/utils/font.h
+
+/home/firefly/linshi/yolov8/utils/image_drawing.h
+common.h
+/home/firefly/linshi/yolov8/utils/common.h
+
