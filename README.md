@@ -1,0 +1,2 @@
+# YOLOv8_RK3588_object_detect
+YOLOv8_RK3588_object_detect
