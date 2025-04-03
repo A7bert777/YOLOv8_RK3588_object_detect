@@ -9,7 +9,7 @@
 
 #include <set>
 #include <vector>
-#define LABEL_NALE_TXT_PATH "/home/firefly/linshi/yolov8/model/4classgarbage.txt"  // *****你需要在此处将路径改为你的txt的绝对路径
+#define LABEL_NALE_TXT_PATH "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/model/4classgarbage.txt"  // *****你需要在此处将路径改为你的txt的绝对路径
 
 static char *labels[OBJ_CLASS_NUM];
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/firefly/linshi/yolov8
+# Install script for directory: /home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./rknn_yolov8_demo"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "/home/firefly/linshi/yolov8/build/rknn_yolov8_demo")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/." TYPE EXECUTABLE FILES "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/rknn_yolov8_demo")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./rknn_yolov8_demo" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./rknn_yolov8_demo")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./rknn_yolov8_demo"
-         OLD_RPATH "/home/firefly/linshi/yolov8/rknn_lib:"
+         OLD_RPATH "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/rknn_lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./rknn_yolov8_demo")
@@ -58,21 +58,21 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/model" TYPE FILE FILES "/home/firefly/linshi/yolov8/model/bus.jpg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/model" TYPE FILE FILES "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/model/bus.jpg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/model" TYPE FILE FILES "/home/firefly/linshi/yolov8/model/4classgarbage.txt")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/model" TYPE FILE FILES "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/model/4classgarbage.txt")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/model" TYPE FILE FILES "/home/firefly/linshi/yolov8/model/500img_8_27yolov8relu.rknn")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/model" TYPE FILE FILES "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/model/500img_8_27yolov8relu.rknn")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/firefly/linshi/yolov8/build/3rdparty.out/cmake_install.cmake")
-  include("/home/firefly/linshi/yolov8/build/utils.out/cmake_install.cmake")
+  include("/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/3rdparty.out/cmake_install.cmake")
+  include("/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/utils.out/cmake_install.cmake")
 
 endif()
 
@@ -84,5 +84,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/firefly/linshi/yolov8/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

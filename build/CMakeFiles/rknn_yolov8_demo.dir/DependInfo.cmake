@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/firefly/linshi/yolov8/src/main.cc" "/home/firefly/linshi/yolov8/build/CMakeFiles/rknn_yolov8_demo.dir/src/main.cc.o"
-  "/home/firefly/linshi/yolov8/src/postprocess.cc" "/home/firefly/linshi/yolov8/build/CMakeFiles/rknn_yolov8_demo.dir/src/postprocess.cc.o"
-  "/home/firefly/linshi/yolov8/src/yolov8.cc" "/home/firefly/linshi/yolov8/build/CMakeFiles/rknn_yolov8_demo.dir/src/yolov8.cc.o"
+  "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/src/main.cc" "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles/rknn_yolov8_demo.dir/src/main.cc.o"
+  "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/src/postprocess.cc" "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles/rknn_yolov8_demo.dir/src/postprocess.cc.o"
+  "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/src/yolov8.cc" "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles/rknn_yolov8_demo.dir/src/yolov8.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,9 +23,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/firefly/linshi/yolov8/build/utils.out/CMakeFiles/imageutils.dir/DependInfo.cmake"
-  "/home/firefly/linshi/yolov8/build/utils.out/CMakeFiles/fileutils.dir/DependInfo.cmake"
-  "/home/firefly/linshi/yolov8/build/utils.out/CMakeFiles/imagedrawing.dir/DependInfo.cmake"
+  "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/utils.out/CMakeFiles/imageutils.dir/DependInfo.cmake"
+  "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/utils.out/CMakeFiles/fileutils.dir/DependInfo.cmake"
+  "/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/utils.out/CMakeFiles/imagedrawing.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -3,12 +3,13 @@
 
 CMakeFiles/rknn_yolov8_demo.dir/src/main.cc.o
  ../include/postprocess.h
+ ../include/rknn_api.h
  ../include/yolov8.h
  ../utils/common.h
  ../utils/file_utils.h
  ../utils/image_drawing.h
  ../utils/image_utils.h
- /home/firefly/linshi/yolov8/src/main.cc
+ /home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/src/main.cc
  /usr/include/opencv4/opencv2/calib3d.hpp
  /usr/include/opencv4/opencv2/core.hpp
  /usr/include/opencv4/opencv2/core/affine.hpp
@@ -139,14 +140,16 @@ CMakeFiles/rknn_yolov8_demo.dir/src/main.cc.o
  /usr/include/opencv4/opencv2/viz/widgets.hpp
 CMakeFiles/rknn_yolov8_demo.dir/src/postprocess.cc.o
  ../include/postprocess.h
+ ../include/rknn_api.h
  ../include/yolov8.h
  ../utils/common.h
  ../utils/image_utils.h
- /home/firefly/linshi/yolov8/src/postprocess.cc
+ /home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/src/postprocess.cc
 CMakeFiles/rknn_yolov8_demo.dir/src/yolov8.cc.o
  ../include/postprocess.h
+ ../include/rknn_api.h
  ../include/yolov8.h
  ../utils/common.h
  ../utils/file_utils.h
  ../utils/image_utils.h
- /home/firefly/linshi/yolov8/src/yolov8.cc
+ /home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/src/yolov8.cc

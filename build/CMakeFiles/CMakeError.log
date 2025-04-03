@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/firefly/linshi/yolov8/build/CMakeFiles/CMakeTmp
+Change Dir: /home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_edc3e/fast && /usr/bin/make -f CMakeFiles/cmTC_edc3e.dir/build.make CMakeFiles/cmTC_edc3e.dir/build
-make[1]: 进入目录“/home/firefly/linshi/yolov8/build/CMakeFiles/CMakeTmp”
-Building C object CMakeFiles/cmTC_edc3e.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_edc3e.dir/src.c.o   -c /home/firefly/linshi/yolov8/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_edc3e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edc3e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_edc3e.dir/src.c.o  -o cmTC_edc3e 
-/usr/bin/ld: CMakeFiles/cmTC_edc3e.dir/src.c.o: in function `main':
+Run Build Command(s):/usr/bin/make cmTC_d61c7/fast && /usr/bin/make -f CMakeFiles/cmTC_d61c7.dir/build.make CMakeFiles/cmTC_d61c7.dir/build
+make[1]: 进入目录“/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_d61c7.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d61c7.dir/src.c.o   -c /home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d61c7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d61c7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_d61c7.dir/src.c.o  -o cmTC_d61c7 
+/usr/bin/ld: CMakeFiles/cmTC_d61c7.dir/src.c.o: in function `main':
 src.c:(.text+0x48): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5c): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_edc3e.dir/build.make:87：cmTC_edc3e] 错误 1
-make[1]: 离开目录“/home/firefly/linshi/yolov8/build/CMakeFiles/CMakeTmp”
-make: *** [Makefile:121：cmTC_edc3e/fast] 错误 2
+make[1]: *** [CMakeFiles/cmTC_d61c7.dir/build.make:87：cmTC_d61c7] 错误 1
+make[1]: 离开目录“/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:121：cmTC_d61c7/fast] 错误 2
 
 
 Source file was:

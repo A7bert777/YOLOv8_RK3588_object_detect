@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/firefly/linshi/yolov8/utils/file_utils.c
+/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/utils/file_utils.c
 stdio.h
 -
 stdlib.h

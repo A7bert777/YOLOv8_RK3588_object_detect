@@ -6,5 +6,5 @@ CXX_FLAGS =   -pthread
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/firefly/linshi/yolov8/include -I/home/firefly/linshi/yolov8 -I/home/firefly/linshi/yolov8/utils -I/home/firefly/linshi/yolov8/3rdparty/stb_image -I/home/firefly/linshi/yolov8/3rdparty/jpeg_turbo/include -I/home/firefly/linshi/yolov8/3rdparty/librga/include -isystem /usr/include/opencv4 
+CXX_INCLUDES = -I/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/include -I/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect -I/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/utils -I/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/3rdparty/stb_image -I/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/3rdparty/jpeg_turbo/include -I/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/3rdparty/librga/include -isystem /usr/include/opencv4 
 

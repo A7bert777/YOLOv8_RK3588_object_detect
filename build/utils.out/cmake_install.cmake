@@ -1,4 +1,4 @@
-# Install script for directory: /home/firefly/linshi/yolov8/utils
+# Install script for directory: /home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
