@@ -118,9 +118,9 @@ utils.out/clean: utils.out/CMakeFiles/fileutils.dir/clean
 # Target rules for target CMakeFiles/rknn_yolov8_demo.dir
 
 # All Build rule for target.
+CMakeFiles/rknn_yolov8_demo.dir/all: utils.out/CMakeFiles/imageutils.dir/all
 CMakeFiles/rknn_yolov8_demo.dir/all: utils.out/CMakeFiles/imagedrawing.dir/all
 CMakeFiles/rknn_yolov8_demo.dir/all: utils.out/CMakeFiles/fileutils.dir/all
-CMakeFiles/rknn_yolov8_demo.dir/all: utils.out/CMakeFiles/imageutils.dir/all
 	$(MAKE) -f CMakeFiles/rknn_yolov8_demo.dir/build.make CMakeFiles/rknn_yolov8_demo.dir/depend
 	$(MAKE) -f CMakeFiles/rknn_yolov8_demo.dir/build.make CMakeFiles/rknn_yolov8_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/firefly/GitHUb测试/YOLOv8_RK3588_object_detect/build/CMakeFiles --progress-num=9,10,11,12 "Built target rknn_yolov8_demo"
