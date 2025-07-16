@@ -19,82 +19,57 @@
 
 
 int read_image_opencv(const char* path, image_buffer_t* image) 
-{  
-    // 使用 OpenCV 读取图像  
-    cv::Mat cv_img = cv::imread(path,cv::IMREAD_COLOR);  
-    if (cv_img.empty()) 
-    {  
-        printf("error: read image %s fail\n", path);  
-        return -1;  
-    }  
-  
-    // 确定图像格式和通道数  
-    int channels = cv_img.channels();  
-    image->format = (channels == 4) ? IMAGE_FORMAT_RGBA8888 :  
-                    (channels == 1) ? IMAGE_FORMAT_GRAY8 :  
-                                      IMAGE_FORMAT_RGB888;  
-  
-    // 设置图像宽度和高度  
-    image->width = cv_img.cols;  
-    image->height = cv_img.rows;  
-  
-    // 分配内存并复制图像数据  
-    int size = cv_img.total() * channels;  
-    if (image->virt_addr != NULL) 
-    {  
-        // 如果 image->virt_addr 已经分配了内存，则复制数据到该内存  
-        memcpy(image->virt_addr, cv_img.data, size);  
+{
+    cv::Mat cv_img = cv::imread(path, cv::IMREAD_COLOR);
+    if (cv_img.empty()) return -1;
+
+    // 统一转换为RGB格式
+    cv::Mat rgb_img;
+    if (cv_img.channels() == 4) 
+    {
+        cv::cvtColor(cv_img, rgb_img, cv::COLOR_BGRA2RGB);
     } 
     else 
-    {  
-        // 否则，分配新内存  
-        image->virt_addr = (unsigned char *)malloc(size); 
-        if (image->virt_addr == NULL) {  
-            printf("error: memory allocation fail\n");  
-            return -1;  
-        }  
-        memcpy(image->virt_addr, cv_img.data, size);  
-    }  
-  
-    // 如果图像是 4 通道（RGBA），但我们需要 3 通道（RGB），则可以选择性地转换  
-    // 这里假设我们需要 RGB，所以如果是 RGBA，则去掉 A 通道  
-    if (channels == 4) 
-    {  
-        cv::Mat rgb_img;  
-        cv::cvtColor(cv_img, rgb_img, cv::COLOR_RGBA2RGB);  
-        memcpy(image->virt_addr, rgb_img.data, rgb_img.total() * 3);  
-        // 更新大小（去掉 A 通道后的新大小）  
-        size = rgb_img.total() * 3;  
-    }  
-  
-    // 注意：这里我们没有释放 cv_img 的内存，因为 OpenCV 会自动管理它的内存。  
-    // 但是，我们分配给 image->virt_addr 的内存需要在使用完后手动释放。  
-  
-    return 0;  
+    {
+        cv::cvtColor(cv_img, rgb_img, cv::COLOR_BGR2RGB);
+    }
+
+    // 设置图像参数
+    image->format = IMAGE_FORMAT_RGB888;
+    image->width = rgb_img.cols;
+    image->height = rgb_img.rows;
+    
+    // 复制数据
+    int size = rgb_img.total() * rgb_img.channels();
+    image->virt_addr = (unsigned char*)malloc(size);
+    memcpy(image->virt_addr, rgb_img.data, size);
+    
+    return 0;
 }
 
-int write_image(const char* path, const image_buffer_t* img) {  
-    int width = img->width;  
-    int height = img->height;  
-    int channels = (img->format == IMAGE_FORMAT_RGB888) ? 3 :   
-                   (img->format == IMAGE_FORMAT_GRAY8) ? 1 :   
-                   4; // 根据image_buffer_t中的format字段确定通道数  
-    void* data = img->virt_addr;  
-  
-    // 假设图像数据是连续的，且每个通道的数据类型是8位无符号整数  
-    cv::Mat cv_img(height, width, CV_8UC(channels), data);  
-  
-    // 如果通道数为3且图像格式是BGR（因为OpenCV默认使用BGR），则需要转换为RGB以正确保存  
-    if (channels == 3 && img->format != IMAGE_FORMAT_RGB888) { // 假设IMAGE_FORMAT_BGR888表示BGR格式  
-        cv::Mat rgb_img;  
-        cv::cvtColor(cv_img, rgb_img, cv::COLOR_BGR2RGB);  
-        bool success = cv::imwrite(path, rgb_img);  
-        return success ? 0 : -1;  
-    }  
-  
-    // 如果不是3通道，或者图像格式已经是BGR（这里假设你的IMAGE_FORMAT_BGR888表示BGR），则直接保存  
-    bool success = cv::imwrite(path, cv_img);  
-    return success ? 0 : -1; // 成功返回0，失败返回-1  
+int write_image(const char* path, const image_buffer_t* img) 
+{
+    int width = img->width;
+    int height = img->height;
+    int channels = (img->format == IMAGE_FORMAT_RGB888) ? 3 : 
+                   (img->format == IMAGE_FORMAT_GRAY8) ? 1 : 4;
+    void* data = img->virt_addr;
+
+    cv::Mat cv_img(height, width, CV_8UC(channels), data);
+    cv::Mat bgr_img;
+
+    // 始终将 RGB 转换为 BGR
+    if (channels == 3 && img->format == IMAGE_FORMAT_RGB888) 
+    {
+        cv::cvtColor(cv_img, bgr_img, cv::COLOR_RGB2BGR);
+    } 
+    else 
+    {
+        bgr_img = cv_img; // 其他格式直接使用
+    }
+
+    bool success = cv::imwrite(path, bgr_img);
+    return success ? 0 : -1;
 }
 
 //去除文件地址&后缀
