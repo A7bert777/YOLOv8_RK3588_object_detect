@@ -45,6 +45,6 @@ yolov8/rknn_lib 是瑞芯微官方动态库librknnrt.so所在位置
 
 CSDN地址：[【YOLOv8部署至RK3588】模型训练→转换RKNN→开发板部署](https://blog.csdn.net/A_l_b_ert/article/details/141610417?spm=1001.2014.3001.5502)
 
-QQ咨询（not free，除非你点了小星星）：2506245294
+QQ咨询（not free）：2506245294
 
 此处统一说明：加QQ后直接说问题和小星星截图，对于常见的相同问题，很多都已在CSDN博客中提到了（RKNN转换流程是统一的，可去博主所有的RKNN相关博客下去翻评论），已在评论中详细解释过的问题，不予回复。
